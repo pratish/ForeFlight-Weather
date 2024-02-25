@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23C71" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="AirportEntity" representedClassName="AirportEntity" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="String"/>
+        <relationship name="weather" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WeatherReportEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="identifier"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CloudLayerEntity" representedClassName="CloudLayerEntity" syncable="YES">
+        <attribute name="altitudeFt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ceiling" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="coverage" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ConditionsEntity" representedClassName="ConditionsEntity" syncable="YES">
+        <attribute name="dateIssued" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="densityAltitudeFt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dewpointC" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="elevationFt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="flightRules" optional="YES" attributeType="String"/>
+        <attribute name="ident" optional="YES" attributeType="String"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="pressureHg" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="pressureHpa" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="relativeHumidity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="reportedAsHpa" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="tempC" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <attribute name="weather" optional="YES" attributeType="String"/>
+        <relationship name="cloudLayer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CloudLayerEntity"/>
+        <relationship name="cloudLayerV2" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CloudLayerEntity"/>
+        <relationship name="visibility" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VisibilityEntity"/>
+        <relationship name="wind" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WindEntity"/>
+    </entity>
+    <entity name="ForecastEntity" representedClassName="ForecastEntity" syncable="YES">
+        <attribute name="dateIssued" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="elevationFt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ident" optional="YES" attributeType="String"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="conditions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ConditionsEntity"/>
+    </entity>
+    <entity name="VisibilityEntity" representedClassName="VisibilityEntity" syncable="YES">
+        <attribute name="distanceSm" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="prevailingVisSm" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="WeatherReportEntity" representedClassName="WeatherReportEntity" syncable="YES">
+        <relationship name="conditions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ConditionsEntity"/>
+        <relationship name="forecast" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ForecastEntity"/>
+    </entity>
+    <entity name="WindEntity" representedClassName="WindEntity" syncable="YES">
+        <attribute name="direction" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="from" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="speedKts" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="variable" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+</model>

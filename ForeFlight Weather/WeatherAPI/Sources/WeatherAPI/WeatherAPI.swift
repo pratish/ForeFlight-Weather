@@ -30,19 +30,20 @@ public class WeatherAPIRequestProvider {
 }
 
 public struct ResponseMapper {
+    
+    public enum MapperError: Error {
+        case codingKeys
+    }
+    
     private let decoder = JSONDecoder()
     
-    public func mapObject<T>(data: Data) -> T? {
-        print(data)
+    public func mapObject<T>(data: Data) throws -> T  {
         do {
             let decodedObject = try decoder.decode(WeatherReport.self, from: data)
-            
-            print(decodedObject.report)
             return decodedObject as! T
         } catch {
             print(error)
-            return nil
-            
+            throw MapperError.codingKeys
         }
     }
     
@@ -50,23 +51,26 @@ public struct ResponseMapper {
 }
 
 
+@available(iOS 13.0.0, *)
 public class WeatherAPIClient {
     let session = URLSession.shared
+    
+    public enum APIError: Error {
+        case generalError(msg: String)
+    }
     
     public init() {
         
     }
     
-    public func enque<T>(request: URLRequest, completion: @escaping (T) -> Void) {
-        let task = session.dataTask(with: request) { data, response, error in
-            let stringValue = String(data: data!, encoding: .utf8) as! String
-//            print(stringValue)
-            let t: T? = ResponseMapper().mapObject(data: data!)
-            completion(t!)
-        }
-        print("tasking...")
-        //TODO:  Something else should execute, but immediate execute for now.
-        task.resume()
+    public func enque<T: Readable>(request: URLRequest, completion: @escaping (Result<T, APIError>) -> Void) async throws {
+        let (data, response) = try await session.data(for: request)
+            do {
+                let t: T? = try ResponseMapper().mapObject(data: data)
+                completion(Result.success(t!))
+            } catch {
+                completion(Result.failure(APIError.generalError(msg: error.localizedDescription)))
+            }
     }
 }
 

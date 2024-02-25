@@ -3,20 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0651082B89862800F0BFCE /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0651072B89862800F0BFCE /* WeatherDetail.swift */; };
+		3D06510B2B89903E00F0BFCE /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06510A2B89903E00F0BFCE /* WeatherRepository.swift */; };
+		3D06510D2B8A2CE900F0BFCE /* PeriodicUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06510C2B8A2CE900F0BFCE /* PeriodicUpdater.swift */; };
+		3D0651382B8A377C00F0BFCE /* Persistance in Frameworks */ = {isa = PBXBuildFile; productRef = 3D0651372B8A377C00F0BFCE /* Persistance */; };
+		3D90B0AA2B8A3A2000BC0A20 /* WeatherAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 3D90B0A92B8A3A2000BC0A20 /* WeatherAPI */; };
+		3D90B0BA2B8A99C200BC0A20 /* AirportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D90B0B92B8A99C200BC0A20 /* AirportManager.swift */; };
 		3D9F53822B89047400C80DE3 /* ForeFlight_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F53812B89047400C80DE3 /* ForeFlight_WeatherApp.swift */; };
 		3D9F53842B89047400C80DE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F53832B89047400C80DE3 /* ContentView.swift */; };
 		3D9F53862B89047700C80DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9F53852B89047700C80DE3 /* Assets.xcassets */; };
 		3D9F53892B89047700C80DE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9F53882B89047700C80DE3 /* Preview Assets.xcassets */; };
-		3D9F538B2B89047700C80DE3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F538A2B89047700C80DE3 /* Persistence.swift */; };
-		3D9F538E2B89047700C80DE3 /* ForeFlight_Weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F538C2B89047700C80DE3 /* ForeFlight_Weather.xcdatamodeld */; };
 		3D9F53982B89047700C80DE3 /* ForeFlight_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F53972B89047700C80DE3 /* ForeFlight_WeatherTests.swift */; };
 		3D9F53A22B89047700C80DE3 /* ForeFlight_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F53A12B89047700C80DE3 /* ForeFlight_WeatherUITests.swift */; };
 		3D9F53A42B89047700C80DE3 /* ForeFlight_WeatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9F53A32B89047700C80DE3 /* ForeFlight_WeatherUITestsLaunchTests.swift */; };
-		3D9F53C32B890F9100C80DE3 /* WeatherAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 3D9F53C22B890F9100C80DE3 /* WeatherAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +40,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D0651072B89862800F0BFCE /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
+		3D06510A2B89903E00F0BFCE /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
+		3D06510C2B8A2CE900F0BFCE /* PeriodicUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicUpdater.swift; sourceTree = "<group>"; };
+		3D6583FC2B895AD7005DC45F /* Persistance */ = {isa = PBXFileReference; lastKnownFileType = text; path = Persistance; sourceTree = SOURCE_ROOT; };
+		3D90B0B92B8A99C200BC0A20 /* AirportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportManager.swift; sourceTree = "<group>"; };
 		3D9F537E2B89047400C80DE3 /* ForeFlight Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ForeFlight Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9F53812B89047400C80DE3 /* ForeFlight_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeFlight_WeatherApp.swift; sourceTree = "<group>"; };
 		3D9F53832B89047400C80DE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D9F53852B89047700C80DE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D9F53882B89047700C80DE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3D9F538A2B89047700C80DE3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		3D9F538D2B89047700C80DE3 /* ForeFlight_Weather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ForeFlight_Weather.xcdatamodel; sourceTree = "<group>"; };
 		3D9F53932B89047700C80DE3 /* ForeFlight WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ForeFlight WeatherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9F53972B89047700C80DE3 /* ForeFlight_WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeFlight_WeatherTests.swift; sourceTree = "<group>"; };
 		3D9F539D2B89047700C80DE3 /* ForeFlight WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ForeFlight WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D9F53C32B890F9100C80DE3 /* WeatherAPI in Frameworks */,
+				3D90B0AA2B8A3A2000BC0A20 /* WeatherAPI in Frameworks */,
+				3D0651382B8A377C00F0BFCE /* Persistance in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,10 +85,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D0651092B89902E00F0BFCE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3D06510A2B89903E00F0BFCE /* WeatherRepository.swift */,
+				3D06510C2B8A2CE900F0BFCE /* PeriodicUpdater.swift */,
+				3D90B0B92B8A99C200BC0A20 /* AirportManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		3D9F53752B89047400C80DE3 = {
 			isa = PBXGroup;
 			children = (
-				3D9F53C02B89075200C80DE3 /* WeatherAPI */,
 				3D9F53802B89047400C80DE3 /* ForeFlight Weather */,
 				3D9F53962B89047700C80DE3 /* ForeFlight WeatherTests */,
 				3D9F53A02B89047700C80DE3 /* ForeFlight WeatherUITests */,
@@ -103,14 +119,14 @@
 		3D9F53802B89047400C80DE3 /* ForeFlight Weather */ = {
 			isa = PBXGroup;
 			children = (
-				3D9F53B12B8905AB00C80DE3 /* Network */,
-				3D9F53B02B89059F00C80DE3 /* Services */,
+				3D0651092B89902E00F0BFCE /* Services */,
+				3D6583FC2B895AD7005DC45F /* Persistance */,
+				3D9F53C02B89075200C80DE3 /* WeatherAPI */,
 				3D9F53812B89047400C80DE3 /* ForeFlight_WeatherApp.swift */,
 				3D9F53832B89047400C80DE3 /* ContentView.swift */,
 				3D9F53852B89047700C80DE3 /* Assets.xcassets */,
-				3D9F538A2B89047700C80DE3 /* Persistence.swift */,
-				3D9F538C2B89047700C80DE3 /* ForeFlight_Weather.xcdatamodeld */,
 				3D9F53872B89047700C80DE3 /* Preview Content */,
+				3D0651072B89862800F0BFCE /* WeatherDetail.swift */,
 			);
 			path = "ForeFlight Weather";
 			sourceTree = "<group>";
@@ -140,20 +156,6 @@
 			path = "ForeFlight WeatherUITests";
 			sourceTree = "<group>";
 		};
-		3D9F53B02B89059F00C80DE3 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		3D9F53B12B8905AB00C80DE3 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		3D9F53C12B890F9100C80DE3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +180,8 @@
 			);
 			name = "ForeFlight Weather";
 			packageProductDependencies = (
-				3D9F53C22B890F9100C80DE3 /* WeatherAPI */,
+				3D0651372B8A377C00F0BFCE /* Persistance */,
+				3D90B0A92B8A3A2000BC0A20 /* WeatherAPI */,
 			);
 			productName = "ForeFlight Weather";
 			productReference = 3D9F537E2B89047400C80DE3 /* ForeFlight Weather.app */;
@@ -252,6 +255,10 @@
 				Base,
 			);
 			mainGroup = 3D9F53752B89047400C80DE3;
+			packageReferences = (
+				3D6584042B895B61005DC45F /* XCLocalSwiftPackageReference "Persistance" */,
+				3D6584072B895C7A005DC45F /* XCLocalSwiftPackageReference "ForeFlight Weather/WeatherAPI" */,
+			);
 			productRefGroup = 3D9F537F2B89047400C80DE3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -294,9 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D9F538E2B89047700C80DE3 /* ForeFlight_Weather.xcdatamodeld in Sources */,
-				3D9F538B2B89047700C80DE3 /* Persistence.swift in Sources */,
+				3D06510D2B8A2CE900F0BFCE /* PeriodicUpdater.swift in Sources */,
+				3D90B0BA2B8A99C200BC0A20 /* AirportManager.swift in Sources */,
+				3D0651082B89862800F0BFCE /* WeatherDetail.swift in Sources */,
 				3D9F53842B89047400C80DE3 /* ContentView.swift in Sources */,
+				3D06510B2B89903E00F0BFCE /* WeatherRepository.swift in Sources */,
 				3D9F53822B89047400C80DE3 /* ForeFlight_WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,25 +637,29 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		3D6584042B895B61005DC45F /* XCLocalSwiftPackageReference "Persistance" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Persistance;
+		};
+		3D6584072B895C7A005DC45F /* XCLocalSwiftPackageReference "ForeFlight Weather/WeatherAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "ForeFlight Weather/WeatherAPI";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		3D9F53C22B890F9100C80DE3 /* WeatherAPI */ = {
+		3D0651372B8A377C00F0BFCE /* Persistance */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 3D6584042B895B61005DC45F /* XCLocalSwiftPackageReference "Persistance" */;
+			productName = Persistance;
+		};
+		3D90B0A92B8A3A2000BC0A20 /* WeatherAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D6584072B895C7A005DC45F /* XCLocalSwiftPackageReference "ForeFlight Weather/WeatherAPI" */;
 			productName = WeatherAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		3D9F538C2B89047700C80DE3 /* ForeFlight_Weather.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3D9F538D2B89047700C80DE3 /* ForeFlight_Weather.xcdatamodel */,
-			);
-			currentVersion = 3D9F538D2B89047700C80DE3 /* ForeFlight_Weather.xcdatamodel */;
-			path = ForeFlight_Weather.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3D9F53762B89047400C80DE3 /* Project object */;
 }
